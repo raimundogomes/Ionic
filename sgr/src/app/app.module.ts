@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { RequisicoesPage } from '../pages/requisicoes/requisicoes';
+import { DadosPacientePage } from '../pages/dados-paciente/dados-paciente';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,7 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     Page1,
     Page2,
-    RequisicoesPage
+    RequisicoesPage,
+    DadosPacientePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -23,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     Page1,
     Page2,
-    RequisicoesPage
+    RequisicoesPage,
+    DadosPacientePage
   ],
   providers: [
     StatusBar,
