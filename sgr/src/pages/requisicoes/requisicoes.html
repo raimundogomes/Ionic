@@ -16,19 +16,50 @@
 
 
 <ion-content padding>
+    
+    <ion-searchbar 
+      (ionInput)="getItems($event)" 
+      placeholder="Pesquisar paciente">
+    </ion-searchbar>
+
     <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.numero}}
-      <div class="item-note" item-right>
-       <b>Paciente:</b> {{item.paciente}}
-       <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="item.dataRequisicao"></ion-datetime>
-       <b>Exames:</b>
-      </div>
-    </button>
-  </ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <ion-item no-lines>
+          <ion-icon name="ios-paper" item-left it></ion-icon>  
+          <div class="item-note">
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <b>Nº:</b> {{item.numRequisicao}} 
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <b>Paciente:</b> {{item.nomePaciente}} 
+                </ion-col>
+                <ion-col>
+                  {{item.status}} 
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <b>Exames:</b>  {{item.exames}} 
+                </ion-col>
+                <ion-col>
+                  {{item.data}}
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+          </div>
+        </ion-item>        
+       </button> 
+    </ion-list>
+  
+  <!-- 
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
+  -->
 
 </ion-content>

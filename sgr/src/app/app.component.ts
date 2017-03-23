@@ -14,7 +14,7 @@ import { RequisicoesPage } from '../pages/requisicoes/requisicoes';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = RequisicoesPage;
 
   pages: Array<{title: string, component: any}>;
 

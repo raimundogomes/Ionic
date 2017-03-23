@@ -11,31 +11,27 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-requisicoes',
   templateUrl: 'requisicoes.html'
 })
-export class RequisicoesPage {
 
- 
+export class RequisicoesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RequisicoesPage');
   }
 
-    selectedItem: any;
-  icons: string[];
-  items: Array<{numero: string, paciente: string, icon: string, data: string}>;
+  selectedItem: any;
+  items: Array<{numRequisicao: string , nomePaciente: string, exames: string, status: string, data: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask'];
-
     this.items = [];
     for (let i = 1; i < 11; i++) {
       this.items.push({
-        numero: 'N° ' + i,
-        paciente: 'paciente' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length  )],
+        numRequisicao: "" + i,
+        nomePaciente: 'paciente' + i,
+        exames: "Sangue e Urina",
+        status: "Solicitado",
         data: '18/12/2017'
       });
     }
