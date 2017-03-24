@@ -1,0 +1,40 @@
+<!--
+  Generated template for the DetalheRequisicao page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Requisição</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <b>Nº:</b> {{item.numRequisicao}} 
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <b>Paciente:</b> {{item.nomePaciente}} 
+                </ion-col>
+                <ion-col>
+                  {{item.status}} 
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <b>Exames:</b>  {{item.exames}} 
+                </ion-col>
+                <ion-col>
+                  {{item.data}}
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+</ion-content>
