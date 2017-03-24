@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { DadosPacientePage} from '../dados-paciente/dados-paciente';
 
+import { DetalheRequisicaoPage } from '../detalhe-requisicao/detalhe-requisicao';
+
 /*
   Generated class for the Requisicoes page.
 
@@ -39,9 +41,16 @@ export class RequisicoesPage {
     }
   }
 
-  itemTapped(event, item) {
+  detalharPaciente(event, item) {
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(DadosPacientePage, {
+      item: item
+    });
+  }
+
+   detalharRequisicao(event, item) {
+    // That's right, we're pushing to ourselves!
+    this.navCtrl.push(DetalheRequisicaoPage, {
       item: item
     });
   }

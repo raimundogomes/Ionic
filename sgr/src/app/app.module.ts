@@ -5,6 +5,7 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { RequisicoesPage } from '../pages/requisicoes/requisicoes';
 import { DadosPacientePage } from '../pages/dados-paciente/dados-paciente';
+import { DetalheRequisicaoPage } from '../pages/detalhe-requisicao/detalhe-requisicao';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Page1,
     Page2,
     RequisicoesPage,
-    DadosPacientePage
+    DadosPacientePage,
+    DetalheRequisicaoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Page1,
     Page2,
     RequisicoesPage,
-    DadosPacientePage
+    DadosPacientePage,
+    DetalheRequisicaoPage
   ],
   providers: [
     StatusBar,
